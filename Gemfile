@@ -4,6 +4,7 @@ ruby '2.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
+
 # Use sqlite3 as the database for Active Record
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -38,7 +39,26 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-group :development do
+group :test do
+  gem "poltergeist", "~> 1.5"
+  gem "vcr", "~> 2.8"
+  gem "webmock", "~> 1.16"
+  gem 'shoulda-matchers'
+end
+
+group :development, :test do
+  gem "annotate"
+  gem "timecop"
+
+  # rspec
+  gem "rspec-rails"
+  gem "rspec-its"
+  gem "rspec-collection_matchers"
+  gem "spring-commands-rspec"
+  gem "factory_girl_rails", "~> 4.3"
+  gem "database_cleaner", "~> 1.2"
+  gem "cucumber-rails", require: false
+
   gem 'sqlite3', '1.3.8'
 end
 
