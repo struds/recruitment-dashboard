@@ -16,8 +16,8 @@ RSpec.describe Job, :type => :model do
     job.save
     
 
-    job.title.should eql(title)
-    job.overview.should eql(overview)
+    expect(job.title).to eql(title)
+    expect(job.overview).to eql(overview)
   end
 
 end
