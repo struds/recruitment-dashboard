@@ -1,0 +1,19 @@
+<h1>New Job</h1>
+
+<%= form_for :job, url: jobs_path do |j| %>
+
+  <p>
+    <%= j.label :title %><br>
+    <%= j.text_field :title %>
+  </p>
+               
+  <p>
+    <%= j.label :overview %><br>
+    <%= j.text_area :overview %>
+  </p>
+                           
+  <p>
+    <%= j.submit %>
+  </p>
+
+<% end %>

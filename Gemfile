@@ -60,6 +60,9 @@ group :development, :test do
   gem "cucumber-rails", require: false
 
   gem 'sqlite3', '1.3.8'
+
+  gem 'bootstrap-sass', '~> 3.2.0'
+  gem 'autoprefixer-rails'
 end
 
 group :production do

@@ -2,6 +2,7 @@ require 'rails_helper'
 
 describe Job do
   it { should validate_presence_of(:title) }
+  it { should validate_presence_of(:overview) }
 end
 
 RSpec.describe Job, :type => :model do
@@ -15,7 +16,6 @@ RSpec.describe Job, :type => :model do
     job.overview = overview
     job.save
     
-
     expect(job.title).to eql(title)
     expect(job.overview).to eql(overview)
   end
