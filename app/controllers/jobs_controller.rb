@@ -6,7 +6,10 @@ class JobsController < ApplicationController
   def create
     @job = Job.new(job_params)
      
-    @job.save
+    if @job.save
+      flash[:notice] = 'Job was created successfully'
+    end
+
     redirect_to @job
   end
 

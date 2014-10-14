@@ -2,19 +2,14 @@ When(/^I go to create a new job$/) do
   visit new_job_path
 end
 
-When(/^I fill in the fields$/) do |table|
-  # table is a Cucumber::Ast::Table
-  pending
-end
-
 When(/^I press "(.*?)"$/) do |text|
-  pending
+  click_button text
 end
 
 Then(/^I should see "(.*?)"$/) do |text|
-  pending
+  expect(page).to have_content 'Job was created successfully'
 end
 
 When(/^I fill in the field "(.*?)" with "(.*?)$/) do |field, value|
-  pending
+  fill_in field, :with => value
 end
