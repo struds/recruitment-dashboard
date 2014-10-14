@@ -42,25 +42,22 @@ gem 'spring',        group: :development
 group :test do
   gem "poltergeist", "~> 1.5"
   gem "vcr", "~> 2.8"
+  gem "timecop"
   gem "webmock", "~> 1.16"
   gem 'shoulda-matchers'
-end
-
-group :development, :test do
-  gem "annotate"
-  gem "timecop"
-
-  # rspec
+  gem "database_cleaner", "~> 1.2"
   gem "rspec-rails"
   gem "rspec-its"
   gem "rspec-collection_matchers"
   gem "spring-commands-rspec"
-  gem "factory_girl_rails", "~> 4.3"
-  gem "database_cleaner", "~> 1.2"
   gem "cucumber-rails", require: false
+  gem "factory_girl_rails", "~> 4.3"
 
+end
+
+group :development, :test do
+  gem "annotate"
   gem 'sqlite3', '1.3.8'
-
   gem 'bootstrap-sass', '~> 3.2.0'
   gem 'autoprefixer-rails'
 end
