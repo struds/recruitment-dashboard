@@ -1,9 +1,5 @@
-<p>
-  <strong>Title:</strong>
-  <%= @job.title %>
-</p>
+<%= render "shared/header_menu" %>
+
+<h1 class="page-header"><%= @job.title %></h1>
      
-<p>
-  <strong>Overview:</strong>
-  <%= @job.overview %>
-</p>
+<h2><%= @job.overview %></h2>

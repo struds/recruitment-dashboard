@@ -1,13 +1,24 @@
 - watch rails how to video
 - watch backbone and JS vids
 
-- build basic app:
-
-Signup and Auth
-Companies
 Jobs
-Candidates and CV's
+- skin up job new page
+- build job show page and skin
 
+Candidates and CV's
+- create candidate
+  - assign to job from Job show page (or create from Job page)
+  - upload CV during candidate creation
+Search CV's
+Search Candidates
+Job Status
+  - in progress, closed
+Candidate Status
+  - Pending, interview, rejected, offered, accepted
+Signup and Auth
+  - create company
+
+Email CV's to a job
 
 Tech?
 

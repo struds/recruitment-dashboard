@@ -1,19 +1,12 @@
-<h1>New Job</h1>
+<%= render "shared/header_menu" %>
 
-<%= form_for :job, url: jobs_path do |j| %>
+<div class="container">
 
-  <p>
-    <%= j.label :title %><br>
-    <%= j.text_field :title %>
-  </p>
-               
-  <p>
-    <%= j.label :overview %><br>
-    <%= j.text_area :overview %>
-  </p>
-                           
-  <p>
-    <%= j.submit %>
-  </p>
+  <h2 class="form-signin-heading">Create a new Job</h2>
 
-<% end %>
+  <%= form_for :job, url: jobs_path,  html: { class: "form-signin", role: "form" } do |j| %>
+    <%= j.text_area :title, { class: "form-control", placeholder: 'Title'} %>
+    <%= j.text_area :overview, { class: "form-control", placeholder: 'Overview' } %>
+    <%= j.submit class: "btn btn-lg btn-primary btn-block" %>
+  <% end %>
+</div>
