@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :jobs
+  resources :candidates
 
   root 'welcome#index'
 

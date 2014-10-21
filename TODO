@@ -2,12 +2,15 @@
 - watch backbone and JS vids
 
 Jobs
-- skin up job new page
 - build job show page and skin
 
 Candidates and CV's
 - create candidate
-  - assign to job from Job show page (or create from Job page)
+  - dry up side menu and maintain between candidates and job listings
+  - skin up new and show pages
+  - add cukes
+  - Add job relation (candidate belongs to one or more jobs
+  - or create candidate from Job page
   - upload CV during candidate creation
 Search CV's
 Search Candidates

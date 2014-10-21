@@ -1,0 +1,47 @@
+<%= render "shared/header_menu" %>
+
+<div class="main">
+  <h1 class="page-header">Dashboard</h1>
+
+  <h2 class="col-xs-10">Candidates</h2>
+  <%= primary_button 'New Candidate', new_candidate_path, id: "new_candidate", class: "col-xs-1" %>
+
+  <div class="table-responsive">
+
+    <table class="table table-striped">
+
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Contact number</th>
+        <th>Years of experience</th>
+        <th>Availability</th>
+        <th>Cover letter</th>
+        <th>Recruiter notes</th>
+        <th>Direct</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @candidates.each do |candidate| %>
+        <tr>
+          <td><%= candidate.name %></td>
+          <td><%= candidate.email %></td>
+          <td><%= candidate.contact_number %></td>
+          <td><%= candidate.years_of_experience %></td>
+          <td><%= candidate.availability %></td>
+          <td><%= candidate.cover_letter %></td>
+          <td><%= candidate.recruiter_notes %></td>
+          <td><%= candidate.direct %></td>
+          <td><%= link_to 'Show', candidate %></td>
+          <td><%= link_to 'Edit', edit_candidate_path(candidate) %></td>
+          <td><%= link_to 'Destroy', candidate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+
+    </table>
+  </div>
+</div>
