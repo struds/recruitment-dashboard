@@ -15,16 +15,19 @@ class CandidatesController < ApplicationController
   # GET /candidates/new
   def new
     @candidate = Candidate.new
+    @jobs = Job.all
   end
 
   # GET /candidates/1/edit
   def edit
+    @jobs = Job.all
   end
 
   # POST /candidates
   # POST /candidates.json
   def create
     @candidate = Candidate.new(candidate_params)
+    @jobs = Job.all
 
     respond_to do |format|
       if @candidate.save
@@ -69,6 +72,6 @@ class CandidatesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def candidate_params
-      params.require(:candidate).permit(:name, :email, :contact_number, :years_of_experience, :availability, :cover_letter, :recruiter_notes, :direct, :cv)
+      params.require(:candidate).permit(:name, :email, :contact_number, :years_of_experience, :availability, :cover_letter, :recruiter_notes, :direct, :cv, :job_id)
     end
 end

@@ -57,7 +57,7 @@ end
 
 group :development, :test do
   gem "annotate"
-  gem 'sqlite3', '1.3.8'
+  gem 'pg', '0.15.1'
   gem 'bootstrap-sass', '~> 3.2.0'
   gem 'autoprefixer-rails'
 end

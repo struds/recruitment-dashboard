@@ -3,3 +3,32 @@
 <h1 class="page-header"><%= @job.title %></h1>
      
 <h2><%= @job.overview %></h2>
+
+<div class="table-responsive">
+
+  <table class="table table-striped">
+
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>CV</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <% @job.candidates.each do |candidate| %>
+        <tr>
+          <td><%= link_to candidate.name, candidate_path(candidate) %></td>
+          <td><%= candidate.email %></td>
+          <td><%= link_to 'Download CV', candidate.cv.url if candidate.cv.present? %></td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+      <% end %>
+
+    </tbody>
+  </table>
+
+</div>

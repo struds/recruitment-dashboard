@@ -15,6 +15,10 @@
 
   <br/>
 
+  <div class="field"> <%= f.collection_select :job_id, @jobs, :id, :title, { class: "form-control" } %> </div>
+
+  <br/>
+
   <div class="field"> <%= f.text_field :email, { class: "form-control", placeholder: 'Email' } %> </div>
 
   <br/>
