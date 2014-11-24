@@ -1,0 +1,10 @@
+<div class="col-sm-3 col-md-2 sidebar">
+  <ul class="nav nav-sidebar">
+    <li class=<%= 'active' if page_name == 'jobs' %>><%= link_to "Jobs", jobs_path %></li>
+    <li><a href="#">CV's</a></li>
+  </ul>
+  <ul class="nav nav-sidebar">
+    <li class=<%= 'active' if page_name == 'candidates' %>><%= link_to "Candidates", candidates_path %></li>
+    <li><a href="">Recruiters</a></li>
+  </ul>
+</div>

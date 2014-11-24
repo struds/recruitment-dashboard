@@ -1,16 +1,21 @@
 class JobsController < ApplicationController
 
   def new
+    @job = Job.new
   end
 
   def create
     @job = Job.new(job_params)
-     
-    if @job.save
-      flash[:notice] = 'Job was created successfully'
-    end
 
-    redirect_to @job
+    respond_to do |format|
+      if @job.save
+        format.html { redirect_to @job, notice: 'Job was successfully created.' }
+        format.json { render :show, status: :created, location: @job }
+      else
+        format.html { render :new }
+        format.json { render json: @job.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def show

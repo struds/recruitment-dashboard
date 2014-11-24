@@ -3,21 +3,12 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Jobs</a></li>
-            <li><a href="#">CV's</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><%= link_to "Candidates", candidates_path %></li>
-            <li><a href="">Recruiters</a></li>
-          </ul>
-        </div>
+
+        <%= render partial: "shared/side_menu", locals: { page_name: 'jobs' } %>
 
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Dashboard</h1>
+          <h1 class="page-header col-xs-11">Jobs</h1>
 
-          <h2 class="col-xs-11">Jobs</h2>
           <%= primary_button "Create", new_job_path, id: "new_job", class: "col-xs-1" %>
 
           <div class="table-responsive">

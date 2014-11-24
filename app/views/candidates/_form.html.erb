@@ -11,39 +11,44 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :contact_number %><br>
-    <%= f.text_field :contact_number %>
-  </div>
-  <div class="field">
-    <%= f.label :years_of_experience %><br>
-    <%= f.number_field :years_of_experience %>
-  </div>
-  <div class="field">
-    <%= f.label :availability %><br>
-    <%= f.text_field :availability %>
-  </div>
-  <div class="field">
-    <%= f.label :cover_letter %><br>
-    <%= f.text_area :cover_letter %>
-  </div>
-  <div class="field">
-    <%= f.label :recruiter_notes %><br>
-    <%= f.text_area :recruiter_notes %>
-  </div>
+  <div class="field"> <%= f.text_field :name, { class: "form-control", placeholder: 'Name' } %> </div>
+
+  <br/>
+
+  <div class="field"> <%= f.text_field :email, { class: "form-control", placeholder: 'Email' } %> </div>
+
+  <br/>
+
+  <div class="field"> <%= f.text_field :contact_number, { class: "form-control", placeholder: 'Contact Number' } %> </div>
+
+  <br/>
+
+  <div class="field">  <%= f.file_field :cv, { class: "form-control" } %> </div>
+
+  <br/>
+
+  <div class="field"> <%= f.number_field :years_of_experience, { class: "form-control", placeholder: 'Years of Experience' } %> </div>
+
+  <br/>
+
+  <div class="field"> <%= f.text_field :availability, { class: "form-control", placeholder: 'Availability' } %> </div>
+
+  <br/>
+
+  <div class="field"> <%= f.text_area :cover_letter, { class: "form-control", placeholder: 'Cover letter' } %> </div>
+
+  <br/>
+
+  <div class="field"> <%= f.text_area :recruiter_notes, { class: "form-control", placeholder: 'Notes' } %> </div>
+
+  <br/>
+
   <div class="field">
     <%= f.label :direct %><br>
-    <%= f.check_box :direct %>
+    <%= f.check_box :direct, { class: "form-control" } %>
   </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-lg btn-primary btn-block" %>
   </div>
 <% end %>

@@ -5,7 +5,7 @@ Feature: Creating a Job
     And I fill in the field "job_title" with "<title>"
     And I fill in the field "job_overview" with "<overview>"
     And I press "Save Job"
-    Then I should see "Job was created successfully"
+    Then I should see "Job was successfully created"
     Examples:
     |  title     | overview                                                             |
     |  Ruby on Rails Developer  | RoR Backend development on postgres                   |

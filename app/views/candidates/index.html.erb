@@ -1,10 +1,14 @@
 <%= render "shared/header_menu" %>
 
-<div class="main">
-  <h1 class="page-header">Dashboard</h1>
+<div class="container-fluid">
+  <div class="row">
 
-  <h2 class="col-xs-10">Candidates</h2>
-  <%= primary_button 'New Candidate', new_candidate_path, id: "new_candidate", class: "col-xs-1" %>
+    <%= render partial: "shared/side_menu", locals: { page_name: 'candidates' } %>
+
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+    <h1 class="page-header col-xs-10">Candidates</h1>
+    <%= primary_button 'New Candidate', new_candidate_path, id: "new_candidate", class: "col-xs-1" %>
 
   <div class="table-responsive">
 
@@ -35,7 +39,7 @@
           <td><%= candidate.cover_letter %></td>
           <td><%= candidate.recruiter_notes %></td>
           <td><%= candidate.direct %></td>
-          <td><%= link_to 'Show', candidate %></td>
+          <td><%= link_to 'View', candidate %></td>
           <td><%= link_to 'Edit', edit_candidate_path(candidate) %></td>
           <td><%= link_to 'Destroy', candidate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>

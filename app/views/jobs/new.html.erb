@@ -5,6 +5,19 @@
   <h2 class="form-signin-heading">Create a new Job</h2>
 
   <%= form_for :job, url: jobs_path,  html: { class: "form-signin", role: "form" } do |j| %>
+
+  <% if @job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@job.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+      <ul>
+      <% @job.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
     <%= j.text_area :title, { class: "form-control", placeholder: 'Title'} %>
     <%= j.text_area :overview, { class: "form-control", placeholder: 'Overview' } %>
     <%= j.submit class: "btn btn-lg btn-primary btn-block" %>

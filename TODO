@@ -2,24 +2,26 @@
 - watch backbone and JS vids
 
 Jobs
-- build job show page and skin
+  - Add job/candidate relation (candidate belongs to one or more jobs
+  - create candidate from Job page
+  - view candidates from job page
+Candidate Status
+  - Pending, interview, rejected, offered, accepted
+Job Status
+  - in progress, closed
 
 Candidates and CV's
 - create candidate
-  - dry up side menu and maintain between candidates and job listings
-  - skin up new and show pages
   - add cukes
-  - Add job relation (candidate belongs to one or more jobs
+  - Add job/candidate relation (candidate belongs to one or more jobs
   - or create candidate from Job page
-  - upload CV during candidate creation
-Search CV's
-Search Candidates
-Job Status
-  - in progress, closed
-Candidate Status
-  - Pending, interview, rejected, offered, accepted
 Signup and Auth
   - create company
+
+Projects
+  - Project/Team has many jobs
+Search CV's
+Search Candidates
 
 Email CV's to a job
 
@@ -27,5 +29,3 @@ Tech?
 
 Postgres for DB (users, companies, jobs, candidates)
 Store CV's on Disk - have a parser to turn them into a JSON object to store somewhere searchable ? ES or MongoDB
-Async upload for CV's (queue with resque)
-
